@@ -12,8 +12,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class TodoService {
-  
+export class TodoService {  
   todosLimit:number = 10;
   todosUrl:string = 'https://jsonplaceholder.typicode.com/todos';
 
@@ -31,5 +30,10 @@ export class TodoService {
   deleteTodo(todo:Todo):Observable<any> {
     const url = `${this.todosUrl}/${todo.id}`;
     return this.http.delete(url, httpOptions);
+  }
+
+  addTodo(todo: Todo):Observable<Todo> {
+    const url = `${this.todosUrl}`;
+    return this.http.post<Todo>(url, todo, httpOptions);
   }
 }
