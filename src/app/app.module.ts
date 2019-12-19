@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ToDoItemComponent } from './components/to-do-item/to-do-item.component';
+import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
@@ -14,7 +14,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ToDoItemComponent,
+    TodoItemComponent,
     TodoListComponent,
     HeaderComponent,
     AddTodoComponent,

@@ -3,11 +3,11 @@ import { Todo } from 'src/app/models/Todo';
 import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
-  selector: 'app-to-do-item',
-  templateUrl: './to-do-item.component.html',
-  styleUrls: ['./to-do-item.component.css']
+  selector: 'app-todo-item',
+  templateUrl: './todo-item.component.html',
+  styleUrls: ['./todo-item.component.css']
 })
-export class ToDoItemComponent implements OnInit {
+export class TodoItemComponent implements OnInit {
   @Input() todo: Todo
   @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
 
