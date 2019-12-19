@@ -3,12 +3,12 @@ import { Todo } from '../../models/Todo';
 import { TodoService } from '../../services/todo.service';
 
 @Component({
-  selector: 'app-to-do-list',
-  templateUrl: './to-do-list.component.html',
-  styleUrls: ['./to-do-list.component.css']
+  selector: 'app-todo-list',
+  templateUrl: './todo-list.component.html',
+  styleUrls: ['./todo-list.component.css']
 })
 
-export class ToDoListComponent implements OnInit {
+export class TodoListComponent implements OnInit {
   todos:Todo[];
 
   constructor(private todoService:TodoService) { }
