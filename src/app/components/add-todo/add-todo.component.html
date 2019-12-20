@@ -1,4 +1,13 @@
 <form (ngSubmit)="onSubmit()">
-    <input type="text" name="title" [(ngModel)]="title" placeholder="Add todo">
-    <button type="submit" class="btn btn-primary">Add todo</button>
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md">
+            <input [(ngModel)]="title" class="form-control" type="text" placeholder="Add todo" name="todo">
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary btn-block">Add todo</button>
+          </div>
+        </div>
+      </div>
+    
 </form>
