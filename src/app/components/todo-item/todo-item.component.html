@@ -1,7 +1,15 @@
-<div [ngClass]="setClasses()">
-    <p>
-        <input (change)="onToggle(todo)" type="checkbox">
-        {{ todo.title }}
-        <button (click)="onDelete(todo)">x</button>
-    </p>
-</div>
+<li class="list-group-item">
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md" [ngClass]="setClasses()">
+            <label class="custom-control custom-checkbox">
+                <input [(ngModel)]="todo.completed" (change)="onToggle(todo)" type="checkbox" class="custom-control-input">
+                <span class="custom-control-label" for="chbxTerms">{{ todo.title}}</span>        
+            </label>
+          </div>
+          <div class="col-md-1">
+            <button (click)="onDelete(todo)" type="button" class="btn btn-outline-danger">X</button>
+          </div>
+        </div>
+      </div>
+</li>

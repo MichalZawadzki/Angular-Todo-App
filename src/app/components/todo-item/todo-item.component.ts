@@ -18,15 +18,14 @@ export class TodoItemComponent implements OnInit {
 
   setClasses(){
     let classes = {
-      todo: true,
-      'is-complete': this.todo.completed
+      'list-group-item-success': this.todo.completed
     }
     return classes;
   }
 
   onToggle(todo){
     console.log("toggle");
-    todo.completed = !todo.completed
+    // todo.completed = !todo.completed
 
     this.todoService.toggleCompleted(todo).subscribe((todo: any) => {
       console.log(todo);
